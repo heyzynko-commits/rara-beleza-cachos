@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rara Beleza Cachos · Salão de ondulados, cacheados e crespos em Campinas</title>
+<meta name="description" content="Corte SCULP Cut, cachos soltos, mechas terapêuticas e tratamento terapêutico em Campinas. Avaliação sem custo e linha própria pra cada curvatura.">
+<meta property="og:title" content="Rara Beleza Cachos">
+<meta property="og:description" content="Salão de ondulados, cacheados e crespos em Campinas. Avaliação sem custo.">
+<meta property="og:image" content="img/hero.jpg">
+<meta name="theme-color" content="#143733">
+<link rel="icon" href="img/monograma.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --creme:#FAF3E9; --nude:#EFD9C4; --areia:#F5E7D6; --branco:#FFFCF7;
+    --marrom:#3A170B; --texto:#4B3227; --suave:#76604F; --linha:#E3CFBA;
+    --verde:#143733; --verde-2:#1D4640; --bronze:#724100; --dourado:#A28E4E; --dourado-claro:#D8BE7E;
+    --corpo:'Poppins','Segoe UI',sans-serif; --serif:'Castoro',Georgia,serif;
+    --wrap:1200px; --arco:999px 999px 0 0;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--creme);color:var(--texto);font-family:var(--corpo);font-size:16px;line-height:1.65;font-weight:400}
+  img{display:block;max-width:100%;height:auto}
+
+  /* animações: aparecem ao rolar (só com JS; sem JS tudo fica visível) */
+  .js .revela{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--atraso,0s)}
+  .js .revela.visivel{opacity:1;transform:none}
+  .arco-hero img{animation:aproxima 1.8s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes aproxima{from{transform:scale(1.08)}to{transform:scale(1)}}
+  header.topo{transition:box-shadow .3s ease}
+  header.topo.rolou{box-shadow:0 10px 30px -22px rgba(58,23,11,.45)}
+  .faixa .mono{animation:none}
+  .js .faixa .mono.revela{transform:translateY(12px) scale(.9)}
+  .js .faixa .mono.revela.visivel{transform:none}
+  a{color:inherit}
+  h1,h2,h3{font-weight:300;color:var(--marrom);margin:0;line-height:1.08;letter-spacing:-.015em;text-wrap:balance}
+  h1 em,h2 em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0}
+  p{margin:0}
+  .wrap{max-width:calc(var(--wrap) + 48px);margin:0 auto;padding:0 24px}
+  .pular{position:absolute;left:-999px;top:8px;background:var(--verde);color:#fff;padding:10px 16px;border-radius:999px;z-index:50}
+  .pular:focus{left:16px}
+  :focus-visible{outline:2px solid var(--dourado);outline-offset:3px}
+
+  /* botões */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 26px;border-radius:999px;font:500 15px/1 var(--corpo);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .18s ease,background-color .18s ease,box-shadow .18s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn:active{transform:translateY(0) scale(.98)}
+  .btn-cheio{background:var(--verde);color:#FFF8EE}
+  .btn-cheio:hover{background:var(--verde-2);box-shadow:0 10px 24px -14px rgba(20,55,51,.8)}
+  .btn-linha{border-color:currentColor;color:var(--marrom);background:transparent}
+  .btn-claro{background:var(--dourado-claro);color:var(--marrom)}
+  .link{position:relative;text-decoration:none;font-weight:500;color:var(--verde);display:inline-flex;align-items:center;gap:6px;min-height:44px}
+  .link::after{content:"";position:absolute;left:0;right:0;bottom:10px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+  .link:hover::after{transform:scaleX(1)}
+  .link .seta{transition:transform .2s ease}
+  .link:hover .seta{transform:translateX(3px)}
+
+  /* topo */
+  header.topo{position:sticky;top:0;z-index:20;background:rgba(250,243,233,.97);border-bottom:1px solid var(--linha)}
+  header.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
+  header.topo .marca img{height:52px;width:auto}
+  nav.menu{display:flex;gap:28px;font-size:14.5px}
+  nav.menu a{text-decoration:none;position:relative;padding:12px 0}
+  nav.menu a::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:1px;background:var(--marrom);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+  nav.menu a:hover::after{transform:scaleX(1)}
+  .topo-acoes{display:flex;align-items:center;gap:8px}
+  .icone{width:44px;height:44px;display:grid;place-items:center;border-radius:50%;color:var(--marrom);transition:background-color .2s}
+  .icone:hover{background:var(--nude)}
+  .icone svg{width:20px;height:20px}
+  .topo .btn{min-height:44px;padding:0 20px;font-size:14px}
+  @media (max-width:1023px){nav.menu{display:none}}
+  @media (max-width:560px){.topo .btn,.topo .icone.insta{display:none}header.topo .marca img{height:44px}}
+
+  /* seções */
+  section{padding:104px 0}
+  .sobre{display:inline-flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--dourado);font-weight:500}
+  .sobre::before{content:"";width:28px;height:1px;background:currentColor}
+  section h2{font-size:clamp(34px,4.6vw,56px);margin:16px 0 18px}
+  .lead{font-size:17px;color:var(--suave);max-width:56ch}
+
+  /* abertura */
+  .abertura{background:var(--nude);padding:72px 0 0;overflow:hidden}
+  .abertura .wrap{display:grid;gap:48px;align-items:end}
+  @media (min-width:900px){.abertura .wrap{grid-template-columns:1.05fr 1fr;min-height:calc(100vh - 76px);max-height:900px}}
+  .abertura .texto{padding-bottom:72px;align-self:center}
+  .abertura h1{font-size:clamp(40px,6.2vw,80px);margin:18px 0 24px}
+  .abertura .lead{color:var(--texto);font-size:18px;font-weight:300;max-width:46ch}
+  .fato{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px 28px;font-size:14px;color:var(--marrom)}
+  .fato span{display:inline-flex;align-items:center;gap:8px}
+  .fato span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--dourado)}
+  .acoes{margin-top:34px;display:flex;flex-wrap:wrap;gap:12px}
+  .arco-hero{align-self:end;border-radius:var(--arco);overflow:hidden;aspect-ratio:1/1.08;max-height:calc(100vh - 140px);margin-left:auto;width:100%;max-width:560px;background:var(--areia)}
+  .arco-hero img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+  @media (max-width:899px){.abertura .texto{padding-bottom:0}.arco-hero{margin:0 auto;max-width:440px}}
+  [data-entra]{animation:entra .9s cubic-bezier(.2,.7,.2,1) both}
+  [data-entra="2"]{animation-delay:.12s}
+  [data-entra="3"]{animation-delay:.24s}
+  @keyframes entra{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+  /* curvaturas */
+  .curvas .wrap{display:grid;gap:56px;align-items:center}
+  @media (min-width:900px){.curvas .wrap{grid-template-columns:1fr 1fr}}
+  .curvas figure{margin:0;border-radius:24px;overflow:hidden;background:var(--branco)}
+  @media (max-width:899px){.curvas figure{order:2;max-width:360px;margin:0 auto;width:100%}}
+  .tipos{list-style:none;margin:32px 0 30px;padding:0;border-top:1px solid var(--linha)}
+  .tipos li{display:grid;grid-template-columns:120px 1fr auto;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--linha)}
+  .tipos b{font-weight:500;color:var(--marrom)}
+  .tipos small{color:var(--suave);font-size:15px}
+  .tipos a{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--verde);text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+  .tipos a:hover{text-decoration:underline;text-underline-offset:4px}
+  @media (max-width:560px){.tipos li{grid-template-columns:1fr auto}.tipos small{grid-column:1/-1;order:3}}
+
+  /* serviços: cartões em arco */
+  .servicos{background:var(--verde);color:#E7DDCD}
+  .servicos h2{color:#FFF8EE}
+  .servicos .lead{color:#C2D2CC}
+  .servicos .sobre{color:var(--dourado-claro)}
+  .cabeca{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 40px;margin-bottom:52px}
+  .arcos{display:grid;gap:24px}
+  @media (min-width:768px){.arcos{grid-template-columns:repeat(3,1fr)}}
+  .arco{background:var(--branco);color:var(--texto);border-radius:var(--arco);border-bottom-left-radius:28px;border-bottom-right-radius:28px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;transition:transform .25s ease,box-shadow .25s ease}
+  .arco:hover{transform:translateY(-2px);box-shadow:0 26px 50px -30px rgba(0,0,0,.6)}
+  .arco .foto{aspect-ratio:4/4.2;overflow:hidden;border-radius:var(--arco);margin:10px 10px 0}
+  .arco .foto img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .arco:hover .foto img{transform:scale(1.03)}
+  .arco .corpo{padding:26px 28px 30px;display:flex;flex-direction:column;gap:12px;flex:1}
+  .arco h3{font-size:26px;font-weight:300}
+  .arco h3 em{font-family:var(--serif)}
+  .arco .promessa{color:var(--marrom);font-size:16px}
+  .ganhos{list-style:none;margin:2px 0 6px;padding:0;display:grid;gap:8px;font-size:15px;color:var(--suave)}
+  .ganhos li{display:grid;grid-template-columns:18px 1fr;gap:8px}
+  .ganhos li::before{content:"";width:9px;height:9px;margin-top:8px;border-radius:50%;border:1.5px solid var(--dourado)}
+  .arco .agendar{align-self:flex-start;margin-top:auto}
+  .mais{margin-top:72px;display:grid;gap:12px 40px}
+  @media (min-width:768px){.mais{grid-template-columns:repeat(3,1fr)}}
+  .mais h3{grid-column:1/-1;color:var(--dourado-claro);font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:500;margin-bottom:8px}
+  .mais div{padding:18px 0;border-top:1px solid rgba(216,190,126,.22)}
+  .mais b{display:block;color:#FFF8EE;font-weight:400;font-size:18px;margin-bottom:4px}
+  .mais span{color:#B9CBC5;font-size:15px}
+
+  /* combos */
+  .combos .grade{display:grid;gap:20px;margin-top:8px}
+  @media (min-width:768px){.combos .grade{grid-template-columns:repeat(3,1fr)}}
+  .combo{background:var(--branco);border:1px solid var(--linha);border-radius:24px;padding:34px 30px;display:flex;flex-direction:column;gap:14px;transition:transform .25s ease,box-shadow .25s ease}
+  .combo:hover{transform:translateY(-2px);box-shadow:0 22px 44px -32px rgba(58,23,11,.6)}
+  .combo .nome{font-family:var(--serif);font-size:30px;color:var(--marrom);line-height:1.1}
+  .combo .soma{font-size:15px;color:var(--suave)}
+  .combo .ganho{margin-top:auto;padding-top:16px;font-size:15.5px;color:var(--texto)}
+  .combo .ganho::before{content:"";display:block;width:32px;height:1px;background:var(--dourado);margin-bottom:16px}
+  .combo.destaque{background:var(--marrom);border-color:var(--marrom)}
+  .combo.destaque .nome{color:#FFF8EE}
+  .combo.destaque .soma{color:#D8C7B6}
+  .combo.destaque .ganho{color:#EADBCB}
+
+  /* linhas */
+  .linhas{background:var(--nude)}
+  .produtos{display:grid;gap:20px;grid-template-columns:repeat(2,1fr)}
+  @media (min-width:900px){.produtos{grid-template-columns:repeat(5,1fr)}}
+  .produto{text-decoration:none;display:flex;flex-direction:column;gap:12px}
+  .produto .foto{border-radius:var(--arco);overflow:hidden;background:var(--branco);aspect-ratio:2/3}
+  .produto .foto img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .produto:hover .foto img{transform:scale(1.03)}
+  .produto b{font-weight:500;color:var(--marrom);font-size:17px;display:block}
+  .produto span{font-size:14.5px;color:var(--suave)}
+  .produto .p{font-family:var(--serif);color:var(--bronze);font-size:19px}
+  .vantagem{margin-top:40px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px;background:var(--branco);border-radius:20px;padding:22px 28px}
+  .vantagem p{font-size:17px;color:var(--marrom)}
+  .vantagem b{font-weight:500}
+
+  /* faixa */
+  .faixa{background:var(--verde);text-align:center;padding:112px 0;position:relative;overflow:hidden}
+  .faixa img.mono{width:84px;margin:0 auto 22px;opacity:.95}
+  .faixa h2{color:#FFF8EE;margin:0 auto;max-width:18ch}
+  .faixa p{color:#C2D2CC;margin:18px auto 34px;max-width:52ch;font-size:17px}
+
+  /* mentoria */
+  .mentoria .wrap{display:grid;gap:40px;align-items:center}
+  @media (min-width:900px){.mentoria .wrap{grid-template-columns:1fr 1.1fr}}
+  .mentoria h2{color:var(--bronze);font-family:var(--serif);font-weight:400;font-size:clamp(36px,4.6vw,58px)}
+  .mentoria .itens{list-style:none;margin:22px 0 30px;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+  .mentoria .itens li{border:1px solid var(--linha);border-radius:999px;padding:8px 16px;font-size:14.5px;background:var(--branco)}
+
+  /* rodapé */
+  footer{background:var(--marrom);color:#E2D3C2;padding:80px 0 36px}
+  footer .cols{display:grid;gap:36px}
+  @media (min-width:900px){footer .cols{grid-template-columns:1.3fr 1fr 1fr 1fr}}
+  footer img{height:76px;width:auto;margin-bottom:16px}
+  footer h3{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--dourado-claro);font-weight:500;margin-bottom:14px}
+  footer ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+  footer a{text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
+  footer a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+  footer .base{margin-top:56px;padding-top:22px;border-top:1px solid rgba(216,190,126,.25);font-size:13px;color:#BFA996;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+  /* WhatsApp flutuante */
+  .whats{position:fixed;right:20px;bottom:20px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 28px -10px rgba(0,0,0,.45);transition:transform .2s ease}
+  .whats:hover{transform:translateY(-2px) scale(1.04)}
+  .whats svg{width:30px;height:30px;color:#fff}
+
+  @media (max-width:767px){section{padding:72px 0}.cabeca{margin-bottom:36px}.btn{width:100%}.acoes .btn{width:100%}.vantagem .btn{width:100%}}
+  @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+<script>
+  document.documentElement.classList.add('js');
+</script>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular pro conteúdo</a>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#" aria-label="Rara Beleza Cachos, início"><img src="img/logo.png" alt="Rara Beleza Cachos" width="420" height="239"></a>
+    <nav class="menu" aria-label="Principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#combos">Combos</a>
+      <a href="#linhas">Linhas</a>
+      <a href="#mentoria">Mentoria</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="topo-acoes">
+      <a class="icone insta" href="https://www.instagram.com/rarabelezacachos/" aria-label="Instagram da Rara" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+      <a class="btn btn-cheio" data-whats="Oi! Quero agendar uma avaliação" href="#">Agendar avaliação</a>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<section class="abertura">
+  <div class="wrap">
+    <div class="texto">
+      <span class="sobre" data-entra>Campinas</span>
+      <h1 data-entra="2">Salão de ondulados, cacheados e <em>crespos</em></h1>
+      <p class="lead" data-entra="2">Corte na técnica SCULP Cut, cachos soltos, mechas terapêuticas e tratamento terapêutico, com uma linha própria pra cada curvatura.</p>
+      <div class="fato" data-entra="3"><span>Avaliação sem custo</span><span>27 anos cuidando de cachos</span></div>
+      <div class="acoes" data-entra="3">
+        <a class="btn btn-cheio" data-whats="Oi! Quero agendar uma avaliação" href="#">Agendar avaliação</a>
+        <a class="btn btn-linha" href="#servicos">Ver serviços</a>
+      </div>
+    </div>
+    <div class="arco-hero" data-entra="2"><img src="img/hero.jpg" alt="Três clientes da Rara com cabelos cacheados e crespos, sorrindo ao ar livre" width="1500" height="1353" fetchpriority="high"></div>
+  </div>
+</section>
+
+<section class="curvas" id="curvaturas">
+  <div class="wrap">
+    <figure class="revela"><img src="img/tipos.jpg" alt="Tipos de cabelo: ondulados 2A a 2C, cacheados 3A a 3C e crespos 4A a 4C" width="1024" height="864" loading="lazy"></figure>
+    <div class="revela" style="--atraso:.1s">
+      <span class="sobre">Pra cada curvatura</span>
+      <h2>Cada tipo de cabelo pede um <em>cuidado</em></h2>
+      <p class="lead">Todos os procedimentos usam produtos próprios pra cabelo com curvatura, que tem menos água, menos óleo e menos queratina. Até a coloração é sem amônia.</p>
+      <ul class="tipos">
+        <li><b>2A a 2C</b><small>Ondulados: raiz lisa, comprimento ondulado</small><a href="#linhas">Majestade</a></li>
+        <li><b>3A a 3C</b><small>Cacheados: definição que dura mais</small><a href="#linhas">Glória</a></li>
+        <li><b>4A a 4C</b><small>Crespos: reposição de óleo e nutrição</small><a href="#linhas">Milagre</a></li>
+      </ul>
+      <a class="link" href="https://www.instagram.com/rarabelezacachos/" target="_blank" rel="noopener">Ver as transformações no Instagram <span class="seta">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="servicos" id="servicos">
+  <div class="wrap">
+    <div class="cabeca revela">
+      <div>
+        <span class="sobre">Serviços</span>
+        <h2>O que fazemos no salão</h2>
+      </div>
+      <p class="lead">Tudo começa com uma avaliação sem custo. A profissional olha o seu cabelo, explica o que indica e só então começa.</p>
+    </div>
+    <div class="arcos">
+      <a class="arco revela" data-whats="Oi! Quero agendar o corte SCULP Cut" href="#">
+        <div class="foto"><img src="img/cliente-1.jpg" alt="Cliente da Rara com cabelo curto cacheado" width="486" height="607" loading="lazy"></div>
+        <div class="corpo">
+          <h3>Corte <em>SCULP Cut</em></h3>
+          <p class="promessa">Um corte que respeita o desenho natural do seu cacho.</p>
+          <ul class="ganhos">
+            <li>Feito a seco: você vê o resultado enquanto corta</li>
+            <li>Pensado pro seu rosto e pro seu dia a dia</li>
+            <li>Técnica exclusiva da Luciana Lourenço</li>
+          </ul>
+          <span class="btn btn-cheio agendar">Agendar avaliação</span>
+        </div>
+      </a>
+      <a class="arco revela" style="--atraso:.12s" data-whats="Oi! Quero agendar cachos soltos" href="#">
+        <div class="foto"><img src="img/cliente-2.jpg" alt="Cliente da Rara com cabelo crespo volumoso" width="486" height="607" loading="lazy"></div>
+        <div class="corpo">
+          <h3>Cachos <em>soltos</em></h3>
+          <p class="promessa">Cachos abertos e hidratados, sem perder a sua textura.</p>
+          <ul class="ganhos">
+            <li>Tira o encolhimento sem alisar</li>
+            <li>Hidrata enquanto solta</li>
+            <li>Ideal pro cabelo crespo 4C</li>
+          </ul>
+          <span class="btn btn-cheio agendar">Agendar avaliação</span>
+        </div>
+      </a>
+      <a class="arco revela" style="--atraso:.24s" data-whats="Oi! Quero agendar o tratamento terapêutico" href="#">
+        <div class="foto"><img src="img/cliente-3.jpg" alt="Cliente da Rara com cachos longos e definidos" width="486" height="607" loading="lazy"></div>
+        <div class="corpo">
+          <h3>Tratamento <em>terapêutico</em></h3>
+          <p class="promessa">Cachos definidos e um couro cabeludo saudável.</p>
+          <ul class="ganhos">
+            <li>Repõe a água e o óleo que o fio perdeu</li>
+            <li>Começa com um detox do couro cabeludo</li>
+            <li>Óleos vegetais e máscaras de frutos do cerrado</li>
+          </ul>
+          <span class="btn btn-cheio agendar">Agendar avaliação</span>
+        </div>
+      </a>
+    </div>
+    <div class="mais revela">
+      <h3>Também fazemos</h3>
+      <div><b>Mechas terapêuticas</b><span>Luz no cabelo sem ressecar o cacho</span></div>
+      <div><b>Coloração vegana</b><span>Sem amônia, cor que também trata o fio</span></div>
+      <div><b>Tonalizante</b><span>Realça a cor e devolve o brilho</span></div>
+      <div><b>Tratamento 10 em 1</b><span>Hidratação profunda pro cabelo que pede água</span></div>
+      <div><b>Multiplicador de Ações</b><span>Força pro fio fino que passou por química</span></div>
+      <div><b>Corte de transição</b><span>Pra quem quer deixar o cabelo natural de vez</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="combos" id="combos">
+  <div class="wrap">
+    <div class="cabeca revela">
+      <div>
+        <span class="sobre">Combos Rara</span>
+        <h2>O tratamento <em>completo</em></h2>
+      </div>
+      <p class="lead">Cada combo junta o serviço com o tratamento terapêutico: você faz e trata na mesma visita, e paga menos do que separado.</p>
+    </div>
+    <div class="grade">
+      <div class="combo destaque revela">
+        <div class="nome">Rara Premium</div>
+        <p class="soma">Corte SCULP Cut + tratamento terapêutico</p>
+        <p class="ganho">O corte novo já sai com os cachos tratados e definidos.</p>
+      </div>
+      <div class="combo revela" style="--atraso:.12s">
+        <div class="nome">Rara Gold</div>
+        <p class="soma">Cachos soltos + tratamento terapêutico</p>
+        <p class="ganho">Solta e trata ao mesmo tempo, pro cacho aberto não ressecar.</p>
+      </div>
+      <div class="combo revela" style="--atraso:.24s">
+        <div class="nome">Rara Color</div>
+        <p class="soma">Coloração ou tonalizante + tratamento terapêutico</p>
+        <p class="ganho">Colore e trata no mesmo dia, sem abrir mão da saúde do fio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="linhas" id="linhas">
+  <div class="wrap">
+    <div class="cabeca revela">
+      <div>
+        <span class="sobre">Linhas Rara</span>
+        <h2>Pra cuidar em <em>casa</em></h2>
+      </div>
+      <a class="link" href="https://rarabelezacachos.com.br/" target="_blank" rel="noopener">Ver a loja completa <span class="seta">→</span></a>
+    </div>
+    <div class="produtos revela">
+      <a class="produto" href="https://rarabelezacachos.com.br/" target="_blank" rel="noopener"><div class="foto"><img src="img/majestade.jpg" alt="Kit Majestade" width="700" height="1074" loading="lazy"></div><div><b>Kit Majestade</b><span>Ondulados 2A a 2C</span></div><span class="p">R$ 195</span></a>
+      <a class="produto" href="https://rarabelezacachos.com.br/" target="_blank" rel="noopener"><div class="foto"><img src="img/gloria.jpg" alt="Kit Glória" width="700" height="1074" loading="lazy"></div><div><b>Kit Glória</b><span>Cacheados 3A a 3C</span></div><span class="p">R$ 229</span></a>
+      <a class="produto" href="https://rarabelezacachos.com.br/" target="_blank" rel="noopener"><div class="foto"><img src="img/milagre.jpg" alt="Kit Milagre" width="700" height="1074" loading="lazy"></div><div><b>Kit Milagre</b><span>Crespos 4A a 4C</span></div><span class="p">R$ 229</span></a>
+      <a class="produto" href="https://rarabelezacachos.com.br/" target="_blank" rel="noopener"><div class="foto"><img src="img/aleluia.jpg" alt="Blend de óleos Aleluia" width="700" height="1074" loading="lazy"></div><div><b>Blend Aleluia</b><span>Blend de óleos</span></div><span class="p">R$ 79</span></a>
+      <a class="produto" href="https://rarabelezacachos.com.br/" target="_blank" rel="noopener"><div class="foto"><img src="img/shalom.jpg" alt="Spray de brilho Shalom" width="700" height="1074" loading="lazy"></div><div><b>Spray Shalom</b><span>Spray de brilho</span></div><span class="p">R$ 79</span></a>
+    </div>
+    <div class="vantagem revela">
+      <p>Levando qualquer kit, o <b>blend ou o spray sai por R$ 40</b>.</p>
+      <a class="btn btn-cheio" data-whats="Oi! Quero comprar um kit" href="#">Comprar pelo WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="faixa">
+  <div class="wrap">
+    <img class="mono revela" src="img/monograma.png" alt="" width="200" height="200" loading="lazy">
+    <h2 class="revela" style="--atraso:.1s">Avaliação sem custo, com <em>café</em> e tempo pra conversar</h2>
+    <p>A profissional olha o seu cabelo, explica o que indica e passa o valor exato antes de começar. Pode marcar pelo WhatsApp a qualquer hora, inclusive à noite.</p>
+    <a class="btn btn-claro" data-whats="Oi! Quero agendar uma avaliação" href="#">Agendar avaliação</a>
+  </div>
+</section>
+
+<section class="mentoria" id="mentoria">
+  <div class="wrap">
+    <div class="revela">
+      <span class="sobre">Mentoria pra salões</span>
+      <h2>Quer levar a técnica da Rara pro seu salão?</h2>
+    </div>
+    <div class="revela" style="--atraso:.12s">
+      <p class="lead">A Luciana Lourenço começou atendendo uma cliente por dia, num quarto. Hoje a Rara faz mais de 800 atendimentos por mês. Na mentoria, a sua cabeleireira passa o dia no salão aprendendo o passo a passo de 27 anos de experiência.</p>
+      <ul class="itens"><li>Corte SCULP Cut</li><li>Tratamento</li><li>Finalização com a linha Rara</li><li>Marketing e vídeos</li><li>Liderança de equipe</li></ul>
+      <a class="btn btn-cheio" data-whats="Oi! Quero saber da mentoria da Luciana" href="#">Quero saber da mentoria</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="contato">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <img src="img/logo-clara.png" alt="Rara Beleza Cachos" width="420" height="239" loading="lazy">
+        <p>Salão de ondulados, cacheados e crespos em Campinas.</p>
+      </div>
+      <div>
+        <h3>Visite</h3>
+        <ul><li>Jardim Chapadão, Campinas</li><li>Terça a sábado, com hora marcada</li></ul>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <ul>
+          <li><a data-whats="Oi!" href="#">WhatsApp (19) 99192-2946</a></li>
+          <li><a href="https://www.instagram.com/rarabelezacachos/" target="_blank" rel="noopener">@rarabelezacachos</a></li>
+          <li><a href="mailto:rarabelezaadm@gmail.com">rarabelezaadm@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Navegue</h3>
+        <ul><li><a href="#servicos">Serviços e valores</a></li><li><a href="#combos">Combos</a></li><li><a href="#linhas">Linhas Rara</a></li><li><a href="#mentoria">Mentoria</a></li></ul>
+      </div>
+    </div>
+    <div class="base"><span>© 2026 Rara Beleza Cachos</span><span>Site e atendimento por Zynko</span></div>
+  </div>
+</footer>
+
+<a class="whats" data-whats="Oi! Quero agendar uma avaliação" href="#" aria-label="Falar com a Rara no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg></a>
+
+<script>
+  // Todos os botões de agendar abrem o WhatsApp da Rara, já com a mensagem certa (a Helena responde).
+  var NUMERO = '5519991922946';
+  document.querySelectorAll('[data-whats]').forEach(function (a) {
+    // "Vim pelo site" deixa contar no relatório do mês quantas conversas o site trouxe.
+    a.href = 'https://wa.me/' + NUMERO + '?text=' + encodeURIComponent('Vim pelo site. ' + a.getAttribute('data-whats'));
+    a.target = '_blank'; a.rel = 'noopener';
+  });
+  // Seções aparecem uma vez ao entrar na tela; o menu ganha sombra quando a página rola.
+  var itens = document.querySelectorAll('.revela');
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var obs = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visivel'); obs.unobserve(e.target); } }); }, { threshold: .15, rootMargin: '0px 0px -40px 0px' });
+    itens.forEach(function (el) { obs.observe(el); });
+  } else { itens.forEach(function (el) { el.classList.add('visivel'); }); }
+  var topo = document.querySelector('header.topo');
+  addEventListener('scroll', function () { topo.classList.toggle('rolou', scrollY > 10); }, { passive: true });
+</script>
+</body>
+</html>
